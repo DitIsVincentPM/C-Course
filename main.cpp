@@ -1,17 +1,13 @@
 #include <iostream>
+#include <cmath>
 
 int main() {
-    std::string name;
-    int age;
+    double x = 3;
+    double y = 4;
+    double z;
 
-    std::cout << "Enter your fullVi name: \n";
-    std::getline(std::cin >> std::ws, name);
-
-    std::cout << "Enter your age: \n";
-    std::cin >> age;
-
-    std::cout << "Welcome, " << name << std::endl;
-    std::cout << "You are, " << age << " years old" <<std::endl;
+    z = floor(3.4);
+    std::cout << z << std::endl;
 
     return 0;
 }
