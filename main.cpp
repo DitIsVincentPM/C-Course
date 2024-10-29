@@ -2,18 +2,40 @@
 #include <cmath>
 
 int main() {
-    double a;
-    double b;
-    double c;
+    char op;
+    double num1, num2, result;
 
-    std::cout << "Enter a number: ";
-    std::cin >> a;
+    std::cout<<"************ Calculator ************\n";
+    std::cout<<"1. Addition\n";
+    std::cout<<"2. Subtraction\n";
+    std::cout<<"3. Multiplication\n";
+    std::cout<<"4. Division\n";
+    std::cout<<"************ Calculator ************\n";
 
-    std::cout << "Enter a number: ";
-    std::cin >> b;
+    std::cin >> op;
 
-    c = sqrt(pow(a, 2) + pow(b, 2));
-    std::cout << "The square root of " << a << " and " << b << " is " << c;
+    std::cout<<"What's the first number: \n";
+    std::cin >> num1;
+    std::cout<<"What's the Secondd number: \n";
+    std::cin >> num2;
+4
+    std::cout<<"************ Calculator ************\n";
+    switch (op) {
+        case '1':
+            result = num1 + num2;
+            break;
+        case '2':
+            result = num1 - num2;
+            break;
+        case '3':
+            result = num1 * num2;
+            break;
+        case '4':
+            result = num1 / num2;
+            break;
+    }
+    std::cout << "The result is: " << result << std::endl;
+    std::cout<<"************ Calculator ************\n";
 
     return 0;
 }
