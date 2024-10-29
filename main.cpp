@@ -2,12 +2,18 @@
 #include <cmath>
 
 int main() {
-    double x = 3;
-    double y = 4;
-    double z;
+    double a;
+    double b;
+    double c;
 
-    z = floor(3.4);
-    std::cout << z << std::endl;
+    std::cout << "Enter a number: ";
+    std::cin >> a;
+
+    std::cout << "Enter a number: ";
+    std::cin >> b;
+
+    c = sqrt(pow(a, 2) + pow(b, 2));
+    std::cout << "The square root of " << a << " and " << b << " is " << c;
 
     return 0;
 }
