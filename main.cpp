@@ -2,40 +2,25 @@
 #include <cmath>
 
 int main() {
-    char op;
-    double num1, num2, result;
+    double temp;
+    char unit;
 
-    std::cout<<"************ Calculator ************\n";
-    std::cout<<"1. Addition\n";
-    std::cout<<"2. Subtraction\n";
-    std::cout<<"3. Multiplication\n";
-    std::cout<<"4. Division\n";
-    std::cout<<"************ Calculator ************\n";
+    std::cout << "What is your starting unit: F = Farenhite, C = Celcius: \n";
+    std::cin >> unit;
 
-    std::cin >> op;
+    if (unit == 'C') {
+        std::cout << "Enter temperature in Celsius: \n";
+        std::cin >> temp;
 
-    std::cout<<"What's the first number: \n";
-    std::cin >> num1;
-    std::cout<<"What's the Secondd number: \n";
-    std::cin >> num2;
-4
-    std::cout<<"************ Calculator ************\n";
-    switch (op) {
-        case '1':
-            result = num1 + num2;
-            break;
-        case '2':
-            result = num1 - num2;
-            break;
-        case '3':
-            result = num1 * num2;
-            break;
-        case '4':
-            result = num1 / num2;
-            break;
+        temp = (1.8*temp) + 32;
+        std::cout << "It's " << temp << " farenhite.\n";
+    } else {
+        std::cout << "Enter temperature in Fahrenheit: \n";
+        std::cin >> temp;
+
+        temp = (temp - 32) / 1.8;
+        std::cout << "It's " << temp << " celcius.\n";
     }
-    std::cout << "The result is: " << result << std::endl;
-    std::cout<<"************ Calculator ************\n";
 
     return 0;
 }
