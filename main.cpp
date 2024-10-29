@@ -1,19 +1,12 @@
 #include <iostream>
+#include <vector>
 
-namespace first {
-    int x = 1;
-}
-
-namespace second {
-    int x = 2;
-}
+typedef std::vector<std::pair<std::string, int>> Vector2;
 
 int main() {
-    // this removes need to declare namespace
-    using std::string;
-    using std::cout;
+    Vector2 v;
 
-    cout << first::x + second::x << std::endl;
-
+    v.push_back(std::make_pair("John", 20));
+    std::cout << v[0].first << " " << v[0].second << std::endl;
     return 0;
 }
