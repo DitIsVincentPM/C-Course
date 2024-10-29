@@ -1,10 +1,11 @@
 #include <iostream>
 
 int main() {
-    srand(time(NULL));
+    std::string people[] = {"John", "John", "John"};
 
-    int num = (rand() % 6) + 1;
-    std::cout << "The number is: " << num << std::endl;
+    for (auto person: people) {
+        std::cout << person << std::endl;
+    }
 
     return 0;
 }
