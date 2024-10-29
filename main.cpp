@@ -1,26 +1,29 @@
 #include <iostream>
 
-int searchArray(int array[], int size, int element);
+void sortArray(int array[], int size);
 
 int main() {
-    int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int size = sizeof(numbers) / sizeof(int);
-    int index;
-    int myNum;
-
-    std::cout << "Enter number to find it:" << std::endl;
-    std::cin >> myNum;
-
-    index = searchArray(numbers, size, myNum);
-    std::cout << index << std::endl;
+    int numbers[] = {1, 10, 3, 6, 9, 2, 4, 7, 8, 5};
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    sortArray(numbers, size);
 
     return 0;
 }
 
-int searchArray(int array[], int size, int element) {
+void sortArray(int array[], int size) {
+    int temp;
+
     for (int i = 0; i < size; i++) {
-        if (array[i] == element) {
-            return i;
+        for (int j = 0; j < size - i - 1; j++) {
+            if (array[j] < array[j + 1]) {
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
         }
+    }
+
+    for (int i = 0; i < size; i++) {
+        std::cout << array[i] << std::endl;
     }
 }
