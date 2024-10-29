@@ -1,0 +1,3 @@
+C:/Users/vanho/CLionProjects/C++Course/cmake-build-debug/CMakeFiles/C__Course.dir
+C:/Users/vanho/CLionProjects/C++Course/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/vanho/CLionProjects/C++Course/cmake-build-debug/CMakeFiles/rebuild_cache.dir
