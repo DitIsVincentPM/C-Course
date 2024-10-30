@@ -1,29 +1,23 @@
 #include <iostream>
 
-void sortArray(int array[], int size);
+void swap(std::string &a, std::string &b);
 
 int main() {
-    int numbers[] = {1, 10, 3, 6, 9, 2, 4, 7, 8, 5};
-    int size = sizeof(numbers) / sizeof(numbers[0]);
-    sortArray(numbers, size);
+    std::string x = "Kool-Aid";
+    std::string y = "Water";
+
+    swap(x, y);
+
+    std::cout << x << std::endl;
+    std::cout << y << std::endl;
 
     return 0;
 }
 
-void sortArray(int array[], int size) {
-    int temp;
+void swap(std::string &x, std::string &y) {
+    std::string temp;
 
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size - i - 1; j++) {
-            if (array[j] < array[j + 1]) {
-                temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
-            }
-        }
-    }
-
-    for (int i = 0; i < size; i++) {
-        std::cout << array[i] << std::endl;
-    }
+    temp = x;
+    x = y;
+    y = temp;
 }
