@@ -1,11 +1,15 @@
 #include <iostream>
 
 int main() {
-    std::string name = "vincent";
+    int *pNum = NULL;
 
-    std::string *pName = &name;
+    pNum = new int;
+    *pNum = 21;
 
-    std::cout << *pName << std::endl;
+    std::cout << "Adress:" << pNum << std::endl;
+    std::cout << *pNum << std::endl;
+
+    delete pNum;
 
     return 0;
 }
