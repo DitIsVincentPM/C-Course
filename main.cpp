@@ -1,23 +1,11 @@
 #include <iostream>
 
-void swap(std::string &a, std::string &b);
-
 int main() {
-    std::string x = "Kool-Aid";
-    std::string y = "Water";
+    std::string name = "vincent";
 
-    swap(x, y);
+    std::string *pName = &name;
 
-    std::cout << x << std::endl;
-    std::cout << y << std::endl;
+    std::cout << *pName << std::endl;
 
     return 0;
-}
-
-void swap(std::string &x, std::string &y) {
-    std::string temp;
-
-    temp = x;
-    x = y;
-    y = temp;
 }
